@@ -1,0 +1,79 @@
+SELECT
+
+MAX(LEN(CSTR(NZ(Table1.sid                    , "")))),
+MAX(LEN(CSTR(NZ(Table1.school                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.fname                  , "")))),
+MAX(LEN(CSTR(NZ(Table1.lname                  , "")))),
+MAX(LEN(CSTR(NZ(Table1.dob                    , "")))),
+MAX(LEN(CSTR(NZ(Table1.physician              , "")))),
+MAX(LEN(CSTR(NZ(Table1.gender                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.diagnosis              , "")))),
+MAX(LEN(CSTR(NZ(Table1.medical_history        , "")))),
+MAX(LEN(CSTR(NZ(Table1.medication_history     , "")))),
+MAX(LEN(CSTR(NZ(Table1.health_equipment       , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_1                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_1    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_1, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_1                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_1         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_1    , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_2                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_2    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_2, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_2                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_2         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_2    , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_3                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_3    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_3, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_3                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_3         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_3    , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_4                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_4    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_4, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_4                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_4         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_4    , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_5                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_5    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_5, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_5                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_5         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_5    , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_6                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_6    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_6, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_6                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_6         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_6    , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_7                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_7    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_7, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_7                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_7         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_7    , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_8                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_8    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_8, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_8                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_8         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_8    , "")))),
+
+MAX(LEN(CSTR(NZ(Table1.date_9                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.nursing_diagnosis_9    , "")))),
+MAX(LEN(CSTR(NZ(Table1.goals_with_timeframes_9, "")))),
+MAX(LEN(CSTR(NZ(Table1.plan_9                 , "")))),
+MAX(LEN(CSTR(NZ(Table1.intervention_9         , "")))),
+MAX(LEN(CSTR(NZ(Table1.eval_and_findings_9    , ""))))
+
+
+FROM Table1

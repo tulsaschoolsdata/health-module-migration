@@ -1,0 +1,23 @@
+INSERT INTO sql_inserts ( table1_id, student_number, [sql] )
+SELECT CLNG(Table1.ID), student_ids.dcid, (
+  "INSERT INTO HEALTHSTUDENTPLAN VALUES ("
+  & (100 + Table1.ID) & ", "
+  & student_ids.dcid & ", "
+  & "2600, "
+  & "'IHP', "
+  & "NULL, "
+  & "DATE '" & Table1.original_entry_date & "', "
+  & "NULL, "
+  & "428, "
+  & "TO_CLOB('" & sql_parts.sql_w_clobs & "'), "
+  & "0, "
+  & "0, "
+  & "NULL, "
+  & "'DEV Team', "
+  & "DATE '2022-02-10', "
+  & "'DEV Team', "
+  & "DATE '2022-02-10'"
+  & ");"
+)
+FROM sql_parts, Table1 INNER JOIN student_ids ON (Table1.student_number = student_ids.student_number)
+WHERE (Table1.vetted = 1);

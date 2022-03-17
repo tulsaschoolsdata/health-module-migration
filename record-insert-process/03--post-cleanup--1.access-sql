@@ -1,0 +1,19 @@
+UPDATE sql_inserts
+
+SET sql_inserts.[sql] = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(sql_inserts.[sql],
+
+                          "<span><p>" , "<span>" ),
+                          "<span><p>" , "<span>" ),
+                          "<span><p>" , "<span>" ),
+                          "<span><p>" , "<span>" ),
+                          "<span><p>" , "<span>" ),
+
+                          "<p></span>", "</span>"),
+                          "<p></span>", "</span>"),
+                          "<p></span>", "</span>"),
+                          "<p></span>", "</span>"),
+                          "<p></span>", "</span>")
+
+WHERE (sql_inserts.[sql] LIKE "*<span><p>*")
+      OR
+      (sql_inserts.[sql] LIKE "*<p></span>*")

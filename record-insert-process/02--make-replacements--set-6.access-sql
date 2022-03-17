@@ -1,0 +1,10 @@
+UPDATE sql_inserts
+       INNER JOIN Table1 ON (sql_inserts.table1_id = Table1.ID)
+
+SET sql_inserts.[sql] = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(sql_inserts.[sql],
+                          "#6_DATE#"         ,         NZ(Table1.date_6                 , "")                         ),
+                          "#6_DIAGNOSIS#"    , REPLACE(NZ(Table1.nursing_diagnosis_6    , ""), CHR(13)&CHR(10), "<p>")),
+                          "#6_GOALS#"        , REPLACE(NZ(Table1.goals_with_timeframes_6, ""), CHR(13)&CHR(10), "<p>")),
+                          "#6_PLAN#"         , REPLACE(NZ(Table1.plan_6                 , ""), CHR(13)&CHR(10), "<p>")),
+                          "#6_INTERVENTION#" , REPLACE(NZ(Table1.intervention_6         , ""), CHR(13)&CHR(10), "<p>")),
+                          "#6_EVAL_FINDINGS#", REPLACE(NZ(Table1.eval_and_findings_6    , ""), CHR(13)&CHR(10), "<p>"))

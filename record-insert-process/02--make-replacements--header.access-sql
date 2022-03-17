@@ -1,0 +1,15 @@
+UPDATE sql_inserts
+       INNER JOIN Table1 ON (sql_inserts.table1_id = Table1.ID)
+
+SET sql_inserts.[sql] = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(sql_inserts.[sql],
+                          "#SID#"               ,         NZ(Table1.student_number    , "")                         ),
+                          "#SCHOOL#"            ,         NZ(Table1.school            , "")                         ),
+                          "#NAME_F#"            ,         NZ(Table1.fname             , "")                         ),
+                          "#NAME_L#"            ,         NZ(Table1.lname             , "")                         ),
+                          "#DOB#"               ,         NZ(Table1.dob               , "")                         ),
+                          "#PHYSICIAN#"         , REPLACE(NZ(Table1.physician         , ""), CHR(13)&CHR(10), "<p>")),
+                          "#GENDER#"            , REPLACE(NZ(Table1.gender            , ""), CHR(13)&CHR(10), "<p>")),
+                          "#DIAGNOSIS#"         , REPLACE(NZ(Table1.diagnosis         , ""), CHR(13)&CHR(10), "<p>")),
+                          "#MEDICAL_HISTORY#"   , REPLACE(NZ(Table1.medical_history   , ""), CHR(13)&CHR(10), "<p>")),
+                          "#MEDICATION_HISTORY#", REPLACE(NZ(Table1.medication_history, ""), CHR(13)&CHR(10), "<p>")),
+                          "#HEALTH_EQUIPMENT#"  , REPLACE(NZ(Table1.health_equipment  , ""), CHR(13)&CHR(10), "<p>"))
