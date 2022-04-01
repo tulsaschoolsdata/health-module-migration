@@ -3,7 +3,9 @@ INSERT INTO TEMPLATE VALUES (2600, 'IHP', '', 1, 0, DATE '2022-01-01', DATE '202
 
 TO_CLOB('{"formId":0,"name":"default","type":"HEALTHPLAN","groups":[{"name":"details","header":null,"fields":[{"name":"name","type":"string","defaultValue":"IHP","visible":true,"required":true,"options":null},{"name":"description","type":"string","defaultValue":"","visible":true,"required":false,"options":null},{"name":"details","type":"rtf_string","defaultValue":"')
 
-|| TO_CLOB('<div>&nbsp;</div>\n\n<div>\n<table border=\"0\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"vertical-align: top; border-bottom: 1px solid #696969; width: 8em\"><span style=\"font-size:11px\"><span style=\"color:#696969\"><span style=\"font-family:Arial,Helvetica,sans-serif\">SID</span></span></span></td>\n\t\t\t<td style=\"vertical-align: top; border: 1px dotted #dfdfdf\"><span style=\"font-size:11px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">')
+|| TO_CLOB('<div>&nbsp;</div>\n\n<div>\n<table border=\"0\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"vertical-align: top\" colspan=\"3\" rowspan=\"1\">&nbsp;</td>\n\t\t\t<td style=\"vertical-align: top; border-bottom: 1px solid #696969; width: 5em\"><span style=\"font-size:11px\"><span style=\"color:#696969\"><span style=\"font-family:Arial,Helvetica,sans-serif\">Review Date</span></span></span></td>\n\t\t\t<td style=\"vertical-align: top; border: 1px dotted #dfdfdf\"><span style=\"font-size:11px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">')
+|| TO_CLOB('&nbsp;')
+|| TO_CLOB('</span></span></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"vertical-align: top\" colspan=\"5\" rowspan=\"1\">&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"vertical-align: top; border-bottom: 1px solid #696969; width: 8em\"><span style=\"font-size:11px\"><span style=\"color:#696969\"><span style=\"font-family:Arial,Helvetica,sans-serif\">SID</span></span></span></td>\n\t\t\t<td style=\"vertical-align: top; border: 1px dotted #dfdfdf\"><span style=\"font-size:11px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">')
 || TO_CLOB('&nbsp;')
 || TO_CLOB('</span></span></td>\n\t\t\t<td style=\"vertical-align: top\">&nbsp;</td>\n\t\t\t<td style=\"vertical-align: top; border-bottom: 1px solid #696969; width: 5em\"><span style=\"font-size:11px\"><span style=\"color:#696969\"><span style=\"font-family:Arial,Helvetica,sans-serif\">School</span></span></span></td>\n\t\t\t<td style=\"vertical-align: top; border: 1px dotted #dfdfdf\"><span style=\"font-size:11px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">')
 || TO_CLOB('{{school_name}}')
@@ -138,4 +140,4 @@ TO_CLOB('{"formId":0,"name":"default","type":"HEALTHPLAN","groups":[{"name":"det
 || TO_CLOB('","visible":true,"required":false,"options":null}]}]}')
 
 
-, 'DEV Team', 'HEALTHPLAN', NULL, NULL, 3, 'DEV Team', DATE '2022-02-10', 'DEV Team', DATE '2022-02-10')
+, 'DEV Team', 'HEALTHPLAN', NULL, NULL, 3, 'DEV Team', DATE '2022-04-01', 'DEV Team', DATE '2022-04-01')

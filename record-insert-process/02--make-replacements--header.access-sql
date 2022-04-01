@@ -1,7 +1,8 @@
 UPDATE sql_inserts
        INNER JOIN Table1 ON (sql_inserts.table1_id = Table1.ID)
 
-SET sql_inserts.[sql] = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(sql_inserts.[sql],
+SET sql_inserts.[sql] = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(sql_inserts.[sql],
+                          "#REVIEW_DATE#"       ,                                       ""                          ),
                           "#SID#"               ,         NZ(Table1.student_number    , "")                         ),
                           "#SCHOOL#"            ,         NZ(Table1.school            , "")                         ),
                           "#NAME_F#"            ,         NZ(Table1.fname             , "")                         ),

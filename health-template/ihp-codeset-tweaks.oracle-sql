@@ -1,0 +1,45 @@
+-- Relabel "Draft" status to "Active":
+UPDATE CODESET SET
+  CODE         = 'Active',
+  DISPLAYVALUE = 'Active',
+  DESCRIPTION  = 'Active'
+WHERE
+  (CODETYPE = 'HealthPlanStatus')
+  AND
+  (CODE = 'Draft')
+;
+
+-- Create a new "RN Reviewed" status:
+INSERT INTO CODESET (
+  CODESETID                ,
+  CODETYPE                 ,
+  CODE                     ,
+  DISPLAYVALUE             ,
+  DESCRIPTION              ,
+  UIDISPLAYORDER           ,
+  ISVISIBLE                ,
+  ISMODIFIABLE             ,
+  ISDELETABLE              ,
+  CODEORIGIN               ,
+  WHOCREATED               ,
+  WHENCREATED              ,
+  WHOMODIFIED              ,
+  WHENMODIFIED             ,
+  EXCLUDEFROMSTATEREPORTING
+) VALUES (
+  (SELECT MAX(CODESETID) + 1 FROM CODESET),
+  'HealthPlanStatus'                      ,
+  'RN Reviewed'                           ,
+  'RN Reviewed'                           ,
+  'RN Reviewed'                           ,
+  4                                       ,
+  1                                       ,
+  0                                       ,
+  0                                       ,
+  'DEV Team'                              ,
+  'DEV Team'                              ,
+  DATE '2022-04-01'                       ,
+  'DEV Team'                              ,
+  DATE '2022-04-01'                       ,
+  0
+);
